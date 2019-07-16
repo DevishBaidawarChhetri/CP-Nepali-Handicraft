@@ -37,7 +37,7 @@ if(!isset($_SESSION['admin-id'])){
             </li>
             <li>
                 <a href="view-admins.php">
-                    <i class="pe-7s-note2"></i>
+                    <i class="pe-7s-smile"></i>
                     <p>View Registered Admins</p>
                 </a>
             </li>

@@ -88,7 +88,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Ask Question</label>
-                                                <textarea name="forum-question" class="form-control" cols="5" rows="2" placeholder="Ask Question to other members."></textarea>
+                                                <textarea name="forum-question" class="form-control" cols="5" rows="2" placeholder="Ask Question to other members." required></textarea>
                                             </div>
                                         </div>
                                     </div>

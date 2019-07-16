@@ -62,7 +62,7 @@
             return $this->connect->qry($sql);
         }
 
-        // Select All Product from database
+        // Select All Contact from database
         public function selectContact(){
             return $this->connect->getData("SELECT * FROM `tbl_contact`");
         }

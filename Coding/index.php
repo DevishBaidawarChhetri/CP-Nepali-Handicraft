@@ -1,4 +1,5 @@
 <?php
+    session_start();
     if(isset($_GET['msg']) && $_GET['msg'] == 'subscribed'){
         echo "<script>window.alert('Successfully Subscribed!');</script>";
     }
@@ -68,8 +69,14 @@
         <div class="container py-md-5">
             <div class="about-w3ls-info text-center mx-auto">
                 <h3 class="tittle-wthree pt-md-5 pt-3">About Us</h3>
-                <p class="sub-tittle mt-3 mb-sm-5 mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed perferendis maxime veritatis culpa, accusantium qui reiciendis inventore porro incidunt numquam delectus quam laborum? Molestias atque commodi tenetur hic soluta illo?</p>
-                <a href="#" class="btn btn-danger submit">Read More</a>
+                <p class="sub-tittle mt-3 mb-sm-5 mb-4">
+                  Nepali Handicraft is a leading handmade Handicraft company in Nepal.
+                  We sell our own handmade handicraft products using local resources by local Nepalese people.
+                  We do have our inventory of our own manufactured by our skilled manpower. We are one of the leading manufacturer,
+                  exporter and wholeseller of different types of Nepalese handmade handicraft products like handmadeclothing, handmade
+                  jewelleries, handmade felt goods, handmade thanks, handmade handicraftpaper.....
+                </p>
+                <a href="about.php" class="btn btn-danger submit">Read More</a>
             </div>
         </div>
     </section>
@@ -81,45 +88,43 @@
             <div class="row">
                 <div class="col-lg-5 welcome-left">
                     <p>What We Provide</p>
-                    <h3 class="tittle-wthree mt-2 mb-3">We Rank the Best
-                        Courses on the Web</h3>
-
+                    <h3 class="tittle-wthree mt-2 mb-3">We have the BestDealers in the market</h3>
                     <p class="mt-4 pr-lg-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, a voluptatum? Sint doloremque amet, odio assumenda temporibus corrupti, repellat blanditiis autem ipsam facere eligendi cupiditate officiis quidem sed laboriosam aperiam?</p>
                 </div>
                 <div class="col-lg-7 welcome-right text-center mt-lg-0 mt-5">
                     <div class="row">
                         <div class="col-sm-4 service-1-w3ls serve-gd2">
                             <div class="serve-grid mt-4">
-                                <i class="fas fa-book"></i>
-                                <p class="mt-2">Languages</p>
+                                <i class="fas fa-tshirt" style="color:rgba(3, 144, 214, 0.7);"></i>
+                                <p class="mt-2">Clothing</p>
                             </div>
                             <div class="serve-grid mt-4">
-                                <i class="fas fa-book"></i>
-                                <p class="mt-2">Software </p>
+                                <i class="fas fa-gem" style="color:rgba(255, 76, 76, 0.7);"></i>
+                                <p class="mt-2">Jewelleries </p>
                             </div>
                         </div>
                         <div class="col-sm-4 service-1-w3ls serve-gd3">
                             <div class="serve-grid mt-4">
-                                <i class="fas fa-book"></i>
-                                <p class="mt-2">Business</p>
+                                <i class="fas fa-book" style="color:rgba(52, 191, 73, 0.7);"></i>
+                                <p class="mt-2">Thanks</p>
                             </div>
                             <div class="serve-grid mt-4">
-                                <i class="fas fa-book"></i>
-                                <p class="text-li mt-2">Coaching </p>
+                              <i class="fas fa-scroll" style="color:rgba(104, 76, 255, 0.7);"></i>
+                                <p class="text-li mt-2">Papers </p>
                             </div>
                             <div class="serve-grid mt-4">
-                                <i class="fas fa-book"></i>
-                                <p class="mt-2">Design </p>
+                                <i class="fab fa-pied-piper-hat" style="color:rgba(52, 191, 73, 0.7);"></i>
+                                <p class="mt-2">Pipe </p>
                             </div>
                         </div>
                         <div class="col-sm-4 service-1-w3ls serve-gd2">
                             <div class="serve-grid mt-4">
-                                <i class="fas fa-book"></i>
-                                <p class="mt-2">Development </p>
+                                <i class="fas fa-gopuram" style="color:rgba(255, 76, 76, 0.7);"></i>
+                                <p class="mt-2">Statue </p>
                             </div>
                             <div class="serve-grid mt-4">
-                                <i class="fas fa-book"></i>
-                                <p class="mt-2">Literature</p>
+                                <i class="fas fa-map" style="color:rgba(3, 144, 214, 0.7);"></i>
+                                <p class="mt-2">Pashmina</p>
                             </div>
                         </div>
                     </div>
@@ -134,9 +139,7 @@
         <div class="container py-md-3 text-center">
             <div class="last-lavi-inner-content px-lg-5">
                 <h3 class="mb-4 tittle-wthree">Get started with <span>Online </span> Ordering !</h3>
-                <p class="px-lg-5">Sed ut perspiciatis unde omnis natus error dolor volup tatem ed accus antium dolor emque
-                    laudantium, totam rem aperiam, eaqu ipsa quae ab illo quasi architi ecto beatae vitae dicta
-                    sunt dolor ipsum.</p>
+                <p class="px-lg-5">You are only few steps away from getting close to us. <br>If you haven't registerd yet, what are you waiting for... Just simply register and order our products online <br> -- Hepali Handicraft --</p>
                 <div class="buttons mt-md-4 mt-3">
                     <a href="user-login.php" class="btn btn-default">Login</a>
                     <a href="user-register.php" class="btn btn1"> Register </a>
@@ -146,6 +149,6 @@
     </section>
     <!-- Last Content Ends -->
 </section>
-<?php 
+<?php
     include('includes/footer.php');
 ?>

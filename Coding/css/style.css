@@ -120,7 +120,7 @@ button.navbar-toggler{
         width: 100%;
         position: relative;
     }
-    .content-bg.one-bg, 
+    .content-bg.one-bg,
     .content-bg.two-bg {
         padding: 15px;
         min-width: 200px;
@@ -218,18 +218,25 @@ h3.tittle-wthree {
 .last-content p {
     color: #fff;
 }
-.last-content .buttons a{    
+.last-content .buttons a{
     padding: 10px 15px;
     background: #fff;
     color: #ff3838 !important;
     font-weight: 600;
 }
-.last-content .buttons a:hover{ 
+.last-content .buttons a:hover{
     background: #d6f0da;
     color: #d6523b !important;
 }
+footer{
+  text-align: center;
+}
 footer, .copy_right {
     background: #222;
+}
+footer form{
+    margin: 0 auto;
+    width: 272px;
 }
 a.navbar-brand {
     font-weight: 900;
@@ -244,7 +251,7 @@ a.navbar-brand.mb-3:hover {
     color: #fc636b !important;
 }
 /* For About US Page */
-.inner-about, .inner-contact, .inner-login, .inner-register{
+.inner-about, .inner-contact, .inner-login, .inner-register, .inner-help{
     background: url(../images/about-overlay.jpg) no-repeat center;
     background-size: cover !important;
     min-height: 25em;
@@ -258,6 +265,9 @@ a.navbar-brand.mb-3:hover {
 }
 .inner-login{
     background: url(../images/login-overlay.jpg) no-repeat center;
+}
+.inner-help{
+    background: url(../images/help-overlay.gif) no-repeat center;
 }
 .inner-register{
     background: url(../images/register-overlay.jpg) no-repeat;
@@ -397,3 +407,25 @@ a.navbar-brand.mb-3:hover {
 .copy_right a{
     color: #fff !important;
 }
+/* Product Card Style Start */
+.buton a{
+    font-size: 14px;
+}
+.card-rad{
+    border-radius: 0px;
+    border: none;
+    transition: all 0.25s ease;
+}
+.card-rad:hover{
+    box-shadow: 0px 20px 30px #333;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+.card-rad img{
+    border-radius: 0px;
+}
+.cbody{
+    padding: 20px 20px 0 !important;
+    background-color: #f7f7f7;
+}
+/* Product Card Style End */

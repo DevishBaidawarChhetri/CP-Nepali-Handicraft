@@ -13,6 +13,9 @@
     if(isset($_GET['msg']) && $_GET['msg'] == 'passwordUpdated'){
         echo "<script>window.alert('Password Updated Successfully!');</script>";
     }
+    if(isset($_GET['msg']) && $_GET['msg'] == 'canceled'){
+        echo "<script>window.alert('Order Successfully Cancelled!');</script>";
+    }
     require "../classes/user.class.php";
     $user = new User();
     $userID = $_SESSION['user-id'];

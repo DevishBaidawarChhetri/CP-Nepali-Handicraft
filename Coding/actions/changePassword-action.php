@@ -23,8 +23,12 @@
         // $user->updatePassword($u_id);
         // exit;
         if($oldDbPassword === $oldPassword){
-            if($user->updatePassword($u_id))
+            if($newPassword != $reNewPassword)
             {
+                header("Location: ../user/change-password.php?msg=passwordNotMatch");
+            }
+            else{
+                $user->updatePassword($u_id);
                 header("Location: ../user/user.php?msg=passwordUpdated");
             }
         }

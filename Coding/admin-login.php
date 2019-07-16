@@ -21,19 +21,19 @@
             <div class="col-lg-4 contact-info-left"></div>
             <div class="col-lg-4 contact-right-wthree-info login">
                 <h5 class="text-center mb-4"></h5>
-                <form action="actions/adminLogin-action.php" method="POST">
+                <form action="actions/adminLogin-action.php" method="POST" name="adLoginValidation">
                     
                     <div class="form-group mt-4">
-                        <label><i class="fas fa-home"></i> Username</label>
+                        <label><i class="fas fa-at"></i> Username</label>
                         <input type="text" class="form-control" name="a_username" placeholder="" required>
                     </div>
                                         
                     <div class="form-group mt-4">
-                        <label>Password</label>
+                        <label><i class="fas fa-key"></i> Password</label>
                         <input type="password" class="form-control" name="a_password" placeholder="" required>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary submit mb-4 float-left" name="adminLogin">Submit </button>
+                    <button type="submit" class="btn btn-primary submit mb-4 float-left" name="adminLogin" onclick="return adminLoginValidation()">Submit </button>
 
                 </form>
 

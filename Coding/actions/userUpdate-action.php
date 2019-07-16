@@ -42,11 +42,11 @@
         $u_id = $_POST['u_id'];
         $user->setUserId($u_id);
 
-            // $user->updateProfile($u_id);
+        // $user->updateProfile($u_id);
 
-            if($user->updateProfile($u_id))
-            {
-                header("Location: ../admin/view-users.php?msg=adminUserUpdated");
-            }
+        if($user->updateProfile($u_id))
+        {
+            header("Location: ../admin/view-users.php?msg=adminUserUpdated");
         }
+    }
 ?>

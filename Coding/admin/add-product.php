@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(!isset($_SESSION['admin-id'])){
-        echo "<script>window.alert('Please login to visit this page!');</script><p>Go to<a href='../admin-login.php'> login</a> page</p>";
+        header ('Location: ../login-first');
         exit;
     }
     if(isset($_GET['msg']) && $_GET['msg'] == 'productAdded'){

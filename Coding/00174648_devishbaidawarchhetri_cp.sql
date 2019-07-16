@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 23, 2019 at 05:00 PM
+-- Generation Time: Jul 12, 2019 at 02:52 PM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -42,7 +42,8 @@ CREATE TABLE `tbl_admin` (
 
 INSERT INTO `tbl_admin` (`a_id`, `a_username`, `a_password`, `a_email`, `a_contact`) VALUES
 (1, 'admin', 'admin', 'admin@admin.com', 9843324021),
-(3, 'deepak', 'deepak', 'deepak@gmail.com', 9876543234);
+(3, 'deepak', 'deepak', 'deepak@gmail.com', 9876543234),
+(4, 'devish', 'devish', 'devish@gmail.com', 9843324021);
 
 -- --------------------------------------------------------
 
@@ -64,7 +65,8 @@ CREATE TABLE `tbl_contact` (
 
 INSERT INTO `tbl_contact` (`c_id`, `c_name`, `c_email`, `c_subject`, `c_message`) VALUES
 (1, 'Devish Baidawar Chhetri', 'devish@gmail.com', 'Asking for delivery', 'Can I get facility of home delivery for the product that I have chose?'),
-(2, 'Deepak Maharjan', 'deepakmaharjan10@gmail.com', 'Products Price', 'Can the price of product be reduced??? I am a regular customer. Please!');
+(2, 'Deepak Maharjan', 'deepakmaharjan10@gmail.com', 'Products Price', 'Can the price of product be reduced??? I am a regular customer. Please!'),
+(3, 'Adam Levine', 'adam@gmail.com', 'About Location', 'I would like to know where the office is located!');
 
 -- --------------------------------------------------------
 
@@ -86,7 +88,9 @@ CREATE TABLE `tbl_forum_comment` (
 
 INSERT INTO `tbl_forum_comment` (`fc_id`, `u_name`, `fq_id`, `comment`, `date`) VALUES
 (1, 'Saugat', 1, 'Yes...I am very pleased with the product that I got from this online portal.', '2019-06-22'),
-(4, 'Niyash', 2, 'This is test comment!', '2019-06-23');
+(4, 'Niyash', 2, 'This is test comment!', '2019-06-23'),
+(5, 'Devish', 3, 'Comment test working or not...', '2019-06-24'),
+(6, 'Niyash', 3, 'Working....', '2019-06-24');
 
 -- --------------------------------------------------------
 
@@ -107,7 +111,33 @@ CREATE TABLE `tbl_forum_question` (
 
 INSERT INTO `tbl_forum_question` (`fq_id`, `u_name`, `question`, `date`) VALUES
 (1, 'Devish', 'Is this the best place to find handicraft products???', '2019-06-22'),
-(2, 'Devish', 'This is for test...', '2019-06-22');
+(2, 'Devish', 'This is for test...', '2019-06-22'),
+(3, 'Saujanya', 'Final forum test!', '2019-06-24'),
+(4, 'Devish', 'hjhghjkghjk', '2019-06-24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_order`
+--
+
+CREATE TABLE `tbl_order` (
+  `o_id` int(11) NOT NULL,
+  `u_id` int(11) NOT NULL,
+  `p_id` int(11) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_order`
+--
+
+INSERT INTO `tbl_order` (`o_id`, `u_id`, `p_id`, `date`) VALUES
+(2, 2, 4, '2019-07-08'),
+(4, 1, 2, '2019-07-08'),
+(5, 2, 2, '2019-07-08'),
+(6, 1, 3, '2019-07-12'),
+(7, 1, 4, '2019-07-12');
 
 -- --------------------------------------------------------
 
@@ -161,8 +191,8 @@ CREATE TABLE `tbl_register_user` (
 
 INSERT INTO `tbl_register_user` (`u_id`, `fname`, `lname`, `e_mail`, `telephone`, `address`, `city`, `country`, `region`, `gender`, `password`, `confirm_password`) VALUES
 (1, 'Devish', 'Baidawar Chhetri', 'devish@gmail.com', 9843324021, 'Simako', 'Lalitpur', 'Nepal', 'Bagmati', 'Male', 'devish123', 'devish123'),
-(2, 'Saujanya', 'Subedi', 'saugat@gmail.com', 9843324065, 'Mahalaxmisthan', 'Lalitpur', 'Nepal', 'Bagmati', 'Male', 'saugat', 'saugat'),
-(3, 'Niyash', 'Baidawar Chhetri', 'niyash@gmail.com', 4564675, 'Kupondole', 'Kathmandu', 'Nepal', 'Bagmati', 'Male', 'niyash123', 'niyash123');
+(2, 'Saugat', 'Subedi', 'saugat@gmail.com', 9875541236, 'Mahalaxmisthan', 'Lalitpur', 'Nepal', 'Bagmati', 'Male', 'saugat123', 'saugat123'),
+(3, 'Anish', 'Kumar Thakur', 'anish@gmail.com', 9875421036, 'Bhaisepati', 'Lalitpur', 'Nepal', 'Bagmati', 'Male', 'anish123', 'anish123');
 
 -- --------------------------------------------------------
 
@@ -183,7 +213,7 @@ INSERT INTO `tbl_subscriber` (`s_id`, `s_email`) VALUES
 (1, 'saugat@gmail.com'),
 (2, 'anish@gmail.com'),
 (3, 'deepak@gmail.com'),
-(5, 'niyash@gmail.com');
+(4, 'niyash@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -206,13 +236,22 @@ ALTER TABLE `tbl_contact`
 -- Indexes for table `tbl_forum_comment`
 --
 ALTER TABLE `tbl_forum_comment`
-  ADD PRIMARY KEY (`fc_id`);
+  ADD PRIMARY KEY (`fc_id`),
+  ADD KEY `fq_id` (`fq_id`);
 
 --
 -- Indexes for table `tbl_forum_question`
 --
 ALTER TABLE `tbl_forum_question`
   ADD PRIMARY KEY (`fq_id`);
+
+--
+-- Indexes for table `tbl_order`
+--
+ALTER TABLE `tbl_order`
+  ADD PRIMARY KEY (`o_id`),
+  ADD KEY `p_id` (`p_id`),
+  ADD KEY `u_id` (`u_id`);
 
 --
 -- Indexes for table `tbl_product`
@@ -241,25 +280,31 @@ ALTER TABLE `tbl_subscriber`
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_contact`
 --
 ALTER TABLE `tbl_contact`
-  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbl_forum_comment`
 --
 ALTER TABLE `tbl_forum_comment`
-  MODIFY `fc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `fc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbl_forum_question`
 --
 ALTER TABLE `tbl_forum_question`
-  MODIFY `fq_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `fq_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tbl_order`
+--
+ALTER TABLE `tbl_order`
+  MODIFY `o_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbl_product`
@@ -277,7 +322,24 @@ ALTER TABLE `tbl_register_user`
 -- AUTO_INCREMENT for table `tbl_subscriber`
 --
 ALTER TABLE `tbl_subscriber`
-  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tbl_forum_comment`
+--
+ALTER TABLE `tbl_forum_comment`
+  ADD CONSTRAINT `tbl_forum_comment_ibfk_1` FOREIGN KEY (`fq_id`) REFERENCES `tbl_forum_question` (`fq_id`);
+
+--
+-- Constraints for table `tbl_order`
+--
+ALTER TABLE `tbl_order`
+  ADD CONSTRAINT `tbl_order_ibfk_1` FOREIGN KEY (`p_id`) REFERENCES `tbl_product` (`p_id`),
+  ADD CONSTRAINT `tbl_order_ibfk_2` FOREIGN KEY (`u_id`) REFERENCES `tbl_register_user` (`u_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

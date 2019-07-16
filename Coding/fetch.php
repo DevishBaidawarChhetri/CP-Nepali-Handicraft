@@ -6,8 +6,7 @@
         $dbname = "00174648_devishbaidawarchhetri_cp";
 
         $conn = new mysqli($servername, $username, $password, $dbname);
-        
-
+    
         $query = $_GET['query'];
         $sql = "SELECT * FROM `tbl_product` WHERE `p_name` like '%$query%'; ";
         $result =$conn->query($sql);
@@ -17,3 +16,4 @@
         }
     }
 ?>
+

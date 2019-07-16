@@ -13,72 +13,73 @@
             <div class="col-lg-4 contact-info-left"></div>
             <div class="col-lg-4 contact-right-wthree-info login">
                 <h5 class="text-center mb-4"></h5>
-                <form action="actions/userRegistration-action.php" method="POST">
+                
+                <form action="actions/userRegistration-action.php" method="POST" name="usrReg">
                     
                     <div class="form-group mt-4">
-                        <label><i class="fas fa-home"></i> First Name</label>
+                        <label><i class="fas fa-file-signature"></i> First Name</label>
                         <input type="text" class="form-control" name="fname" placeholder="" required>
                     </div>
                                         
                     <div class="form-group mt-4">
-                        <label>Last Name</label>
+                        <label><i class="fab fa-galactic-senate"></i> Last Name</label>
                         <input type="text" class="form-control" name="lname" placeholder="" required>
                     </div>
                                                             
                     <div class="form-group mt-4">
-                        <label>Email</label>
+                        <label><i class="fas fa-at"></i> Email</label>
                         <input type="text" class="form-control" name="email" placeholder="" required>
                     </div>
                                                             
                     <div class="form-group mt-4">
-                        <label>Telephone</label>
+                        <label><i class="fas fa-mobile-alt"></i> Telephone</label>
                         <input type="text" class="form-control" name="telephone" placeholder="" required>
                     </div>
                     
                     <div class="form-group mt-4">
-                        <label>Address</label>
+                        <label><i class="fas fa-map-marker-alt"></i> Address</label>
                         <input type="text" class="form-control" name="address" placeholder="" required>
                     </div>
                     
                     <div class="form-group mt-4">
-                        <label>City</label>
+                        <label><i class="fas fa-city"></i> City</label>
                         <input type="text" class="form-control" name="city" placeholder="" required>
                     </div>
                     
                     <div class="form-group mt-4">
-                        <label>Country</label>
+                        <label><i class="far fa-flag"></i> Country</label>
                         <input type="text" class="form-control" name="country" placeholder="" required>
                     </div>
                     
                     <div class="form-group mt-4">
-                        <label>Region</label>
+                        <label><i class="fas fa-place-of-worship"></i> Region</label>
                         <input type="text" class="form-control" name="region" placeholder="" required>
                     </div>
                     
                     <div class="form-group mt-4" style="border-bottom: 2px solid #ddd; padding-bottom: 15px;">
-                        <label>Gender: </label>
+                        <label><i class="fas fa-transgender-alt"></i> Gender: </label>
                         <label class="radio-inline">
                             <input type="radio" name="gender" value="Male" checked> Male
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="gender" value="Female" required> Female
+                            <input type="radio" name="gender" value="Female"> Female
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="gender" value="Other" required> Other
+                            <input type="radio" name="gender" value="Other"> Other
                         </label>
                     </div>
                     
                     <div class="form-group mt-4">
-                        <label>Password</label>
+                        <label><i class="fas fa-key"></i> Password</label>
                         <input type="password" class="form-control" name="password" placeholder="" required>
                     </div>
                     
                     <div class="form-group mt-4">
-                        <label>Confirm Password</label>
+                        <label><i class="fas fa-unlock-alt"></i> Confirm Password</label>
                         <input type="password" class="form-control" name="confirm_password" placeholder="" required>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary submit mb-4" name="userRegistration">Submit </button>
+                    <button type="submit" class="btn btn-primary submit mb-4" name="userRegistration" onclick="return userRegistrationValidation()">Submit </button>
 
                 </form>
 

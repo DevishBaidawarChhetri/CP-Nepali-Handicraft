@@ -59,7 +59,8 @@
         // Admin Login
         public function adminLogin()
         {
-            $row = $this->connect->getData("SELECT * FROM `tbl_admin` WHERE `a_username` = '$this->a_username' and `a_password` = '$this->a_password'");
+            $row = $this->connect->getData("SELECT * FROM `tbl_admin` WHERE `a_username` = '$this->a_username' 
+            and `a_password` = '$this->a_password'");
             if(count($row) == 1 )
             {
                 session_start();
@@ -96,7 +97,7 @@
             return $this->connect->getData("SELECT * FROM `tbl_admin`");
         }
 
-        // Delete Selected Users from Database
+        // Delete Selected Admin from Database
         public function deleteAdmin($a_id){
             $sql = "DELETE FROM `tbl_admin` WHERE `a_id` = '$this->a_id'";
             // echo $sql; exit;

@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,18 +40,32 @@ session_start();
                                 <li class="nav-item ">
                                     <a class="nav-link" href="products.php"><i class="fas fa-box"></i> Products</a>
                                 </li>
-                                <?php if(isset($_SESSION['user-id'])){ ?>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="logout.php"><i class="far fa-user-circle"></i> Logout</a>
-                                </li>
-                                <?php } else {?>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="user-login.php"><i class="far fa-user-circle"></i> Login</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="user-register.php"><i class="fas fa-user-plus"></i> Register  </a>
-                                </li>
+                                <?php if(isset($_SESSION['admin-id'])){ ?>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="admin/admin.php"><i class="fas fa-tachometer-alt"></i> Profile</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="logout.php"><i class="far fa-user-circle"></i> Logout</a>
+                                    </li>
                                 <?php } ?>
+                                <?php if(isset($_SESSION['user-id'])){ ?>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="user/user.php"><i class="fas fa-tachometer-alt"></i> Profile</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="logout.php"><i class="far fa-user-circle"></i> Logout</a>
+                                    </li>
+                                <?php } else { if(!isset($_SESSION['admin-id'])) { ?>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="user-login.php"><i class="far fa-user-circle"></i> Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="user-register.php"><i class="fas fa-user-plus"></i> Register  </a>
+                                    </li>
+                                <?php } } ?>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="help.php"><i class="far fa-question-circle"></i> Help</a>
+                                </li>
                             </ul>
                         </div>
                     </nav>

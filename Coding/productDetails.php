@@ -5,7 +5,6 @@
     require ('classes/product.class.1.php');
     $product = new Product();
     $productID = $_GET['id'];
-
     $details = $product->selectProduct($productID);
 ?>
 <div class="inner-products">
@@ -16,7 +15,7 @@
     <section class="about py-5">
         <div class="container py-md-5">
             <div class="about-w3ls-info text-center mx-auto">
-                <h3 class="tittle-wthree pt-md-5 pt-3">Available Products</h3>                
+                <h3 class="tittle-wthree pt-md-5 pt-3">View Product</h3>                
             </div>
         </div>
     </section>
@@ -27,6 +26,8 @@
             width: 250px;
             display: block;
             transition: width 0.4s ease-in-out;
+            border-radius: 32px/50px;
+            border-color: #007bff;
         }
         input#search {
             margin: 0 auto;
@@ -39,6 +40,16 @@
             height: auto;
             border: 1px solid grey;
             display: none;
+        }
+        .card{
+            margin-right: 0 !important;
+            border-radius: 0;
+            border: none;
+            background-color: #f7f7f7;
+        }
+        .pdd-side{
+            margin: 30px 0 30px !important;
+            padding: 0 !important;
         }
     </style>
     
@@ -62,20 +73,24 @@
                     });
                 </script>
                 <div class="search">
-                    <input class="form-control mb-4" type="text" name="search" placeholder="Search your product here" id="search">
+                    <input class="form-control" type="text" name="search" placeholder="Search your product here..." id="search">
                 </div>
                 <div id="here"> </div>
 
             <div class="row">
-                <div class="col-lg-12 mb-4 d-flex align-items-stretch">
+                <div class="col-lg-6 mb-4 d-flex align-items-stretch pdd-side">
                     <div class="card mx-auto">
-                        <img class="card-img-top" src="images/product-images/<?php echo $details[0]['p_image']; ?>" alt="Card image cap">
+                        <img class="card-img-top" style="height:500px; width: auto; border-radius: 0;" src="images/product-images/<?php echo $details[0]['p_image']; ?>" alt="Card image cap">
+                </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-stretch pdd-side">
+                    <div class="card mx-auto">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $details[0]['p_name']; ?></h5>
                             <p class="card-text"><?php echo $details[0]['p_description']; ?></p>
                             <p class="card-text">Original Price: Rs. <s><?php echo $details[0]['p_price']; ?></s></p>
-                            <p class="card-text">Discounted Price: Rs. <?php echo $details[0]['p_disprice']; ?></p>
-                            <a href="productsOrder.php?id=<?php echo $details[0]['p_id']; ?>" class="btn btn-primary" style="color: #fff !important;">Order Now</a>
+                            <p class="card-text text-justify">Discounted Price: Rs. <?php echo $details[0]['p_disprice']; ?></p>
+                            <a href="product-confirm.php?id=<?php echo $details[0]['p_id']; ?>" class="btn btn-primary float-right" style="color: #fff !important;"><i class="fas fa-cart-arrow-down"></i> Order Now</a>
                         </div>
                     </div>
                 </div>

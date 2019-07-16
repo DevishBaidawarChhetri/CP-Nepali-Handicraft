@@ -13,6 +13,9 @@
     if(isset($_GET['msg']) && $_GET['msg'] == 'wrongOldPassword'){
         echo "<script>window.alert('Please enter your old password correctly!');</script>";
     }
+    if(isset($_GET['msg']) && $_GET['msg'] == 'passwordNotMatch'){
+        echo "<script>window.alert('New Password and Re-password doesnot match!');</script>";
+    }
     require "../classes/user.class.php";
     $user = new User();
     $userID = $_SESSION['user-id'];
