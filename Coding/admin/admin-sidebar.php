@@ -61,6 +61,12 @@ if(!isset($_SESSION['admin-id'])){
                 </a>
             </li>
             <li>
+                <a href="view-order.php">
+                    <i class="pe-7s-cart"></i>
+                    <p>View All Orders</p>
+                </a>
+            </li>
+            <li>
                 <a href="view-subscribers.php">
                     <i class="pe-7s-bell"></i>
                     <p>View Subscribers</p>

@@ -101,12 +101,12 @@
                                     <tr>
                                         <th scope="row" class="text-left"><?php echo $details[0]['p_name']; ?></th>
                                         <td>1</td>
-                                        <td>Rs. <?php echo $details[0]['p_price']; ?></td>
-                                        <td>Rs. <?php echo $details[0]['p_price']; ?></td>
+                                        <td>Rs. <?php echo $details[0]['p_disprice']; ?></td>
+                                        <td>Rs. <?php echo $details[0]['p_disprice']; ?></td>
                                     </tr>
                                     <tr>
                                         <th colspan="3" scope="row" class="text-right">Sub Total:</th>
-                                        <td>Rs. <?php echo $details[0]['p_price']; ?></td>
+                                        <td>Rs. <?php echo $details[0]['p_disprice']; ?></td>
                                     </tr>
                                     <tr>
                                         <th colspan="3" scope="row" class="text-right">Flat Shipping Rate:</th>
@@ -114,7 +114,7 @@
                                     </tr>
                                     <tr>
                                         <th colspan="3" scope="row" class="text-right">Total:</th>
-                                        <td>Rs. <?php echo $details[0]['p_price'] + $p; ?></td>
+                                        <td>Rs. <?php echo $details[0]['p_disprice'] + $p; ?></td>
                                     </tr>
                                 </tbody>
                             </table>

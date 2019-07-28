@@ -11,7 +11,7 @@
     // exit;
     if($order->cancelOrder($o_id))
     {        
-        header("Location: ../user/user.php?msg=canceled");
+        header("Location: ../admin/admin.php?msg=canceled");
     }else{
         echo "Something Went Wrong!";
     }

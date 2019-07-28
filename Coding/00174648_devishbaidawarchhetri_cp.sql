@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 12, 2019 at 02:52 PM
+-- Generation Time: Jul 16, 2019 at 02:21 PM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -134,10 +134,11 @@ CREATE TABLE `tbl_order` (
 
 INSERT INTO `tbl_order` (`o_id`, `u_id`, `p_id`, `date`) VALUES
 (2, 2, 4, '2019-07-08'),
-(4, 1, 2, '2019-07-08'),
 (5, 2, 2, '2019-07-08'),
 (6, 1, 3, '2019-07-12'),
-(7, 1, 4, '2019-07-12');
+(7, 1, 4, '2019-07-12'),
+(8, 1, 1, '2019-07-13'),
+(9, 1, 6, '2019-07-16');
 
 -- --------------------------------------------------------
 
@@ -162,7 +163,11 @@ INSERT INTO `tbl_product` (`p_id`, `p_name`, `p_image`, `p_description`, `p_pric
 (1, 'Wooden Basket', '82601441.jpg', 'These are bamboo gift baskets which can be made in different shapes like square rectangular as well as round they come with handle and also can be made without handle too ideal as gift baskets during weddings and celebrations can be customized as per our customers requirement.', 2350, 2150),
 (2, 'Hand Bag', '9874451.jpg', 'Splendidly designed handicraft bags are definite to gain the appreciation of everyone. Purple fabric, creme shoulder strap & floral designs- these all seize the eyes immediately.	', 2400, 2200),
 (3, 'Stick House', '56402347.jpg', 'Ice Cream Stick House is made with the materials like colored popsicle sticks,simple popsicle sticks ,  glue, hot melting glue which are easily available at you house and nearby handicraft store.\r\n\r\nYou can use this popsicle stick house (ice cream stick house) as your school projects and make model house. With materials like popsicle stick and some origami paper make miniature house.', 500, 450),
-(4, 'Handmade Lamp', '10469020.jpg', 'The Estelle lamp is a lamp made from the finest bamboo nets based on the traditional saloni(sieve) design. The light spreads through the bamboo nets and provide a calm and eclectic ambience. This can be used as a floor lamp or a table lamp depending on your preference and interiors.', 3000, 2500);
+(4, 'Handmade Lamp', '10469020.jpg', 'The Estelle lamp is a lamp made from the finest bamboo nets based on the traditional saloni(sieve) design. The light spreads through the bamboo nets and provide a calm and eclectic ambience. This can be used as a floor lamp or a table lamp depending on your preference and interiors.', 3000, 2500),
+(5, 'Wooden Eagle Carving', '27762093.jpg', 'Locally craved wooden eagle. A beautiful piece of art can be used to keep as a show piece on your cupboard. Or wherever you want.', 2000, 1950),
+(6, 'Cupboard key holder', '13675460.jpeg', 'Material: Wood; Color: Brown; Finish: EnamelLength â€“ 7.5 * 30 * 12 Weight: 940g. Functional and versatile to hold and your keys. Can hold up to 6 key rings at once. Made to store a key and decorate your room.', 500, 450),
+(7, 'Spatula Collection with Attractive holder', '9899202.jpg', 'There is  a reason wooden spoons and spatulas have been considered the cooking utensil par excellence for so many years. First off, they are non-conductive, so their handles remain cool even when rested in or atop a hot dish. Second, they are gentle on pans and will not scratch the surface of your beloved cast iron skillet or copper pot. Finally, their handles are comfortable to hold, so you can stir for a long time without hurting yourself. This wooden spatula and spoon are sure to be your favourite utensil for kitchen uses.', 1000, 900),
+(8, 'Deer Book Self', '51293843.jpg', 'Unique deer storage shelf is a purely handcrafted, makes the perfect for books, magazines, remotes and more. No animals or humans were harmed in the making of this product. Each design uses many pieces of wood to create that finished look. Easy to assemble. Removable deer to save space in shipping and storage.', 6999, 6500);
 
 -- --------------------------------------------------------
 
@@ -304,13 +309,13 @@ ALTER TABLE `tbl_forum_question`
 -- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
-  MODIFY `o_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `o_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbl_product`
 --
 ALTER TABLE `tbl_product`
-  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tbl_register_user`

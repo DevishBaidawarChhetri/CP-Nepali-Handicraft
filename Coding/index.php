@@ -89,7 +89,7 @@
                 <div class="col-lg-5 welcome-left">
                     <p>What We Provide</p>
                     <h3 class="tittle-wthree mt-2 mb-3">We have the BestDealers in the market</h3>
-                    <p class="mt-4 pr-lg-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, a voluptatum? Sint doloremque amet, odio assumenda temporibus corrupti, repellat blanditiis autem ipsam facere eligendi cupiditate officiis quidem sed laboriosam aperiam?</p>
+                    <p class="mt-4 pr-lg-5">We help customer to get all necessary items like: Clothing, Thanks, Statue, Papers, Pashmina, Jewelleries, Pipe and many more...</p>
                 </div>
                 <div class="col-lg-7 welcome-right text-center mt-lg-0 mt-5">
                     <div class="row">

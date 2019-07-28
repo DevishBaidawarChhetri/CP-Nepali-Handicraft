@@ -10,6 +10,9 @@
     if(isset($_GET['msg']) && $_GET['msg'] == 'adminUpdated'){
         echo "<script>window.alert('Profile Updated Successfully!');</script>";
     }
+    if(isset($_GET['msg']) && $_GET['msg'] == 'canceled'){
+        echo "<script>window.alert('Order Successfully Rejected!');</script>";
+    }
     require "../classes/admin.class.php";
     $admin = new Admin();
     $adminID = $_SESSION['admin-id'];
